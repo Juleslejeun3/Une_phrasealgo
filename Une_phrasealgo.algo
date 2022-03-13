@@ -1,0 +1,25 @@
+ALGORITHM Une_phrase
+VAR
+    phrase : STRING;
+    i, Long_phrase, Nmots, Nvoyelles : INTEGER;
+    caractere : CHAR
+BEGIN
+    phrase := "je travaille.";
+    Read (phrase);
+    i := 1;
+    Long_phrase := 0;
+    Nmots := 0;
+    Nvoyelles := 0;
+    FOR i FROM "j" TO "." STEP step  DO
+        Long_phrase := Long_phrase + 1;
+        IF (i = " ") THEN
+            Nmots := Nmots + 1;
+        END_IF
+        If (i = "a" or "o" or "i" or "e" or "u") THEN
+            Nvoyelles := Nvoyelles + 1;
+        END_IF
+    END_FOR
+    Write(Long_phrase);
+    Write(Nmots);
+    Write(Nvoyelles);
+END
